@@ -2,16 +2,14 @@
 #include <time.h>
 #include <stdio.h>
 
-/**
- * main - Entry point
- * 
- * Return: Always 0 (Success/correct)
- */
 
+/**
+ * main - assigns a random number to int n
+ * it executes the program, and prints n
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-int n;
-
 	int n;
 
 	srand(time(0));
