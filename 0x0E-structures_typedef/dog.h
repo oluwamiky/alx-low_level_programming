@@ -1,13 +1,33 @@
 #include <unistd.h>
 
+#ifndef DOG_H
+#define DOG_H
+
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * struct dog - gives dog's info
+ * @name: name of the dog?
+ * @age: age of the dog?
+ * @owner: who owns the dog?
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Description: descripbes the dog
  */
-int _putchar(char c)
+struct dog
 {
-	return (write(1, &c, 1));
-}
+	char *name;
+	float age;
+	char *owner;
+};
+
+/**
+ * dog_t - typedef for struct dog
+ */
+typedef struct dog dog_t;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
+
+#endif
