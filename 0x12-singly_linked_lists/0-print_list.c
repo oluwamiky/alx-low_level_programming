@@ -1,6 +1,3 @@
-
-
-[A[A[A[B#include <stdio.h>
 #include "lists.h"
 
 /**
